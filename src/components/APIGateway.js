@@ -12,10 +12,11 @@ class APIGateway extends React.Component{
                 },
                 body: JSON.stringify({'file_name': file.file_name, 'file_content': file.file_content}),
             });
-
+            alert("Triggered AnalyzeSOL");
             const data = await response.json();
             // audit response
-            if (data.status === 201){       // success
+            if (data.status === 201){  
+                alert("Success AnalyzeSOL");     // success
                 return await data.data;
             }
             else{
@@ -34,10 +35,11 @@ class APIGateway extends React.Component{
                     "Authorization": localStorage.getItem('token')
                 },
             });
-
+            alert("Triggered History");
             const data = await response.json();
             // audit response
-            if (data.status === 200){       // success
+            if (data.status === 200){     
+                alert("Success History");  // success
                 return await data.data;
             }
             else{
@@ -60,10 +62,11 @@ class APIGateway extends React.Component{
         
             // Handle the response
             // ...
-        
+            alert("Triggered Login");
             const data = await response.json();
     
             if (data.status === 201){
+                alert("Success Login")
                 localStorage.setItem('token', data.data.token);
                 return await data.data;
             } else {
