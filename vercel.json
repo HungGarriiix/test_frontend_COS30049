@@ -15,9 +15,9 @@
           "Access-Control-Allow-Origin": "*" 
         }
       },
-      { "src": "/static/(.*)", "dest": "/static/$1" },
-      { "src": "/favicon.ico", "dest": "/favicon.ico" },
-      { "src": "/robots.txt", "dest": "/robots.txt" },
-      { "src": "/(.*)", "dest": "/index.html" }
+      { "src": "static/(.*)", "dest": "/static/$1" },
+      { "src": "public/favicon.ico", "dest": "/favicon.ico" },
+      { "src": "public/robots.txt", "dest": "/robots.txt" },
+      { "src": "public/(.*)", "dest": "/index.html" }
     ]
   }
