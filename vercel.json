@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "public/index.html",
+        "src": "src/*.js",
         "use": "@vercel/static"
       }
     ],
@@ -14,6 +14,10 @@
         "headers": {
           "Access-Control-Allow-Origin": "*" 
         }
-      }
+      },
+      { "src": "/static/(.*)", "dest": "/static/$1" },
+      { "src": "/favicon.ico", "dest": "/favicon.ico" },
+      { "src": "/robots.txt", "dest": "/robots.txt" },
+      { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
