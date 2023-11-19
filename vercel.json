@@ -16,8 +16,8 @@
         }
       },
       { "src": "static/(.*)", "dest": "/static/$1" },
-      { "src": "public/favicon.ico", "dest": "/favicon.ico" },
-      { "src": "public/robots.txt", "dest": "/robots.txt" },
-      { "src": "public/(.*)", "dest": "/index.html" }
+      { "src": "public/favicon.ico", "dest": "public/favicon.ico" },
+      { "src": "public/robots.txt", "dest": "public/robots.txt" },
+      { "src": "public/(.*)", "dest": "public/index.html" }
     ]
   }
